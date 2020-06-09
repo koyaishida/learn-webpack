@@ -22,11 +22,20 @@ module.exports = {
         test: /\.(jpeg?g|png|gif|svg|ico)$/i,
         loader:"url-loader",
         options : {
+          //limitのサイズを超える場合は独立したfileパスを生成する
           limit: 2048,
           name: "./images/[name].[ext]"
         }
       },
-      
+      {
+        test:/\.scss$/,
+        //useのloaderは逆順に実行される為、記載する順番に注意
+        use:[
+        "style-loader",
+        "css-loader",
+        "sass-loader"
+        ]
+      },
     ]
   },
   devServer :{
