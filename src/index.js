@@ -1,4 +1,5 @@
 import _ from "lodash"
+import "./style.css"
 // import {Nijou,NAME} from "./utilitys"
 // import * as  utilitys from "./utilitys"
 //名前の競合を避ける
@@ -13,7 +14,8 @@ import Lion from "./utilitys"
 // console.log(utilitys.NAME)
 //console.log(NAME_OF_HAM)
 
-console.log(Lion.say())
+// console.log(Lion.say())
+console.log(style.toString())
 
 function component (){
   const element = document.createElement("div");
@@ -23,3 +25,4 @@ function component (){
 }
 
 document.body.appendChild(component())
+document.body.classList.add("haikei")

@@ -20,11 +20,13 @@
   "devDependencies": {
     "live-server": "^1.2.1",
     "liveserver": "^0.1.20",
+    "style-loader": "^1.2.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "css-loader": "^3.5.3",
     "lodash": "^4.17.15"
   }
 }
