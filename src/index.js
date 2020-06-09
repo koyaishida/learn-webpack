@@ -1,5 +1,6 @@
 import _ from "lodash"
 import "./style.css"
+import logo from "./logo.png"
 // import {Nijou,NAME} from "./utilitys"
 // import * as  utilitys from "./utilitys"
 //名前の競合を避ける
@@ -15,7 +16,7 @@ import Lion from "./utilitys"
 //console.log(NAME_OF_HAM)
 
 // console.log(Lion.say())
-console.log(style.toString())
+//console.log(style.toString())
 
 function component (){
   const element = document.createElement("div");
@@ -26,3 +27,7 @@ function component (){
 
 document.body.appendChild(component())
 document.body.classList.add("haikei")
+
+const image = new Image()
+image.src = logo
+document.body.appendChild(image)
