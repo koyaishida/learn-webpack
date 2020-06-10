@@ -1,4 +1,5 @@
 const path = require("path")
+const HtmlWebPackPlugin = require("html-webpack-plugin")
 
 const outputPath = path.resolve(__dirname,"dist")
 console.log({outputPath})
@@ -10,6 +11,14 @@ module.exports = {
   },
   module: {
     rules : [
+      { 
+        //testは拡張子 js or jsx
+        test: /\.jsx?$/, 
+        //exclude 対象を外すもの
+        exclude: /node_modules/,
+        //トランスパイルするloader
+        loader: "babel-loader" 
+      },
       {
         test:/\.css$/,
         //useのloaderは逆順に実行される為、記載する順番に注意
@@ -36,9 +45,23 @@ module.exports = {
         "sass-loader"
         ]
       },
+      {
+        test: /\.html$/,
+        loader: "html-loader"
+      }
     ]
   },
   devServer :{
     contentBase: outputPath
-  }
+  },
+  plugins: [
+    new HtmlWebPackPlugin(
+      {
+        //雛形htmlfile
+        template: "./src/index.html",
+        //出力先file
+        filename: "./index.html"
+      }
+    )
+  ]
 }

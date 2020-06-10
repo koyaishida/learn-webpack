@@ -18,7 +18,13 @@
   },
   "homepage": "https://github.com/koyaishida/learn-webpack#readme",
   "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "babel-loader": "^8.1.0",
     "file-loader": "^6.0.0",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.3.0",
     "live-server": "^1.2.1",
     "liveserver": "^0.1.20",
     "node-sass": "^4.14.1",
@@ -31,6 +37,8 @@
   },
   "dependencies": {
     "css-loader": "^3.5.3",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.15",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }
